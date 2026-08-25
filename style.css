@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f5f1e8;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* 전체 사이트 */
+
+.site {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    border: 2px solid #333;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(28px, 5vw, 48px);
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+/* PC 레이아웃 */
+
+.layout {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 15px;
+}
+
+/* 메뉴 */
+
+nav {
+    border: 2px solid #333;
+    padding: 20px;
+}
+
+nav h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+nav a {
+    display: block;
+    margin: 12px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 본문 */
+
+main {
+    min-width: 0;
+    border: 2px solid #333;
+    padding: 30px;
+}
+
+main h2 {
+    margin-top: 0;
+}
+
+.recent-posts {
+    margin-top: 40px;
+}
+
+article {
+    padding: 15px 0;
+    border-bottom: 1px dashed #333;
+}
+
+article a {
+    font-size: 20px;
+    color: #333;
+}
+
+article p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* 푸터 */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* 모바일 */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    .layout {
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 12px;
+        margin-bottom: 15px;
+        overflow-x: auto;
+    }
+
+    nav h2 {
+        display: none;
+    }
+
+    nav a {
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+}
